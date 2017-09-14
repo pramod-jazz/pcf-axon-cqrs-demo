@@ -1,0 +1,9 @@
+applications:
+- name: catalog-query-side
+  path: build/libs/pcf-axon-cqrs-demo-catalog-query-side.jar
+  memory: 500M
+  timeout: 120
+  services:
+    - config
+    - registry
+    - mysql

@@ -9,9 +9,12 @@ subprojects {
           mavenCentral()
           jcenter()
       }
-    }
+  }
+
 
     apply plugin: 'java'
+
+
     apply plugin: 'idea'
 
     version = '0.0.1-SNAPSHOT'

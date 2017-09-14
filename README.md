@@ -37,10 +37,10 @@ When logging in, you'll need your account username and password. Be sure to choo
 Once you're logged in, you can setup the supporting services required for the applications. Use the commands below to instantly self-provision backing services for *MySQL*, *RabbitMQ*, *Spring Cloud Registry* and *Spring Cloud Config*. Note that the Config server will need to know where to get it's configuration files. A setup file has been provided in the root of this project that contains [the Github location of the configuration required.](https://github.com/benwilcock/app-config)
 
 ````bash
-$ cf create-service cleardb spark mysql
-$ cf create-service cloudamqp lemur rabbit
-$ cf create-service p-service-registry standard registry
-$ cf create-service p-config-server standard config -c config-server-setup.json
+ cf create-service cleardb spark mysql
+ cf create-service cloudamqp lemur rabbit
+ cf create-service p-service-registry standard registry
+ cf create-service p-config-server standard config -c config-server-setup.json
 ````
 
 Following this step, a quick call to `cf services` should list all four of these application services you provisioned (rabbit, mysql, registry and config). These services will now be available for use by the applications in the targeted space (which is good, because the microservice applications depend on them).

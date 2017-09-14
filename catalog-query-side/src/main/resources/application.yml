@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/everest3?useSSL=false
+    username: root
+    password: root
+  application:
+    name: catalog-query
+server:
+  port: 18187
+logging:
+  level.org.hibernate.SQL: debug
+  #logging.level.org.hibernate.type.descriptor.sql=trace
+  #level.: debug
